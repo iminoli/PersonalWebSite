@@ -3094,12 +3094,11 @@ vertical-align: -.125em;
   </ul></li>
   <li><a href="#data-frame" id="toc-data-frame" class="nav-link" data-scroll-target="#data-frame"><span class="header-section-number">5</span> Data frame</a></li>
   <li><a href="#tibble" id="toc-tibble" class="nav-link" data-scroll-target="#tibble"><span class="header-section-number">6</span> Tibble</a></li>
-  <li><a href="#matrices" id="toc-matrices" class="nav-link" data-scroll-target="#matrices"><span class="header-section-number">7</span> Matrices</a></li>
-  <li><a href="#arrays" id="toc-arrays" class="nav-link" data-scroll-target="#arrays"><span class="header-section-number">8</span> Arrays</a></li>
-  <li><a href="#listas" id="toc-listas" class="nav-link" data-scroll-target="#listas"><span class="header-section-number">9</span> Listas</a></li>
-  <li><a href="#indexado-de-listas" id="toc-indexado-de-listas" class="nav-link" data-scroll-target="#indexado-de-listas"><span class="header-section-number">10</span> Indexado de listas</a></li>
-  <li><a href="#importación" id="toc-importación" class="nav-link" data-scroll-target="#importación"><span class="header-section-number">11</span> Importación</a></li>
-  <li><a href="#exportación" id="toc-exportación" class="nav-link" data-scroll-target="#exportación"><span class="header-section-number">12</span> Exportación</a></li>
+  <li><a href="#arrays" id="toc-arrays" class="nav-link" data-scroll-target="#arrays"><span class="header-section-number">7</span> Arrays</a></li>
+  <li><a href="#listas" id="toc-listas" class="nav-link" data-scroll-target="#listas"><span class="header-section-number">8</span> Listas</a></li>
+  <li><a href="#indexado-de-listas" id="toc-indexado-de-listas" class="nav-link" data-scroll-target="#indexado-de-listas"><span class="header-section-number">9</span> Indexado de listas</a></li>
+  <li><a href="#importación" id="toc-importación" class="nav-link" data-scroll-target="#importación"><span class="header-section-number">10</span> Importación</a></li>
+  <li><a href="#exportación" id="toc-exportación" class="nav-link" data-scroll-target="#exportación"><span class="header-section-number">11</span> Exportación</a></li>
   </ul>
 </nav>
 </div>
@@ -3528,28 +3527,19 @@ No Si
 <span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="sc">-</span> Imprimir todos los objetos en consola.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="matrices" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Matrices</h1>
+<section id="arrays" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Arrays</h1>
 <p>Es simplemente extender un vector a dos dimensiones. Estas se exploran con la función <strong>dim()</strong> y pueden verse detalladas por las funciones <strong>nrow()</strong> número de filas, y <strong>ncol()</strong> por el número de columnas.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejercicio 02.12</span></span>
-<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">-</span> Crear una matriz de <span class="dv">12</span> elementos numéricos con <span class="dv">6</span> filas.</span>
-<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">-</span> ¿Que número de columnas tendrá?</span>
-<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="sc">-</span> Imprimir todos los objetos en consola.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="arrays" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Arrays</h1>
 <p>Cuando el vector se extiende a más de dos dimensiones se utilizan los arrays. A pesar de que pueden representar multidimensiones, tienen que ser datos de un único tipo.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>array_3d <span class="ot">&lt;-</span> <span class="fu">array</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>,</span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>),</span>
-<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">dimnames =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;uno_row&quot;</span>, <span class="st">&quot;dos_row&quot;</span>),</span>
-<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>                                  <span class="fu">c</span>(<span class="st">&quot;five_col&quot;</span>, <span class="st">&quot;six_col&quot;</span>, <span class="st">&quot;seven_col&quot;</span>),</span>
-<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a>                                  <span class="fu">c</span>(<span class="st">&quot;matriz_1&quot;</span>, <span class="st">&quot;matriz_2&quot;</span>)</span>
-<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a>                                  )</span>
-<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a>                  )</span>
-<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a>array_3d</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>array_3d <span class="ot">&lt;-</span> <span class="fu">array</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>,</span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>),</span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">dimnames =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;uno_row&quot;</span>, <span class="st">&quot;dos_row&quot;</span>),</span>
+<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a>                                  <span class="fu">c</span>(<span class="st">&quot;five_col&quot;</span>, <span class="st">&quot;six_col&quot;</span>, <span class="st">&quot;seven_col&quot;</span>),</span>
+<span id="cb71-5"><a href="#cb71-5" aria-hidden="true" tabindex="-1"></a>                                  <span class="fu">c</span>(<span class="st">&quot;matriz_1&quot;</span>, <span class="st">&quot;matriz_2&quot;</span>)</span>
+<span id="cb71-6"><a href="#cb71-6" aria-hidden="true" tabindex="-1"></a>                                  )</span>
+<span id="cb71-7"><a href="#cb71-7" aria-hidden="true" tabindex="-1"></a>                  )</span>
+<span id="cb71-8"><a href="#cb71-8" aria-hidden="true" tabindex="-1"></a>array_3d</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>, , matriz_1
 
@@ -3564,9 +3554,15 @@ uno_row        7       9        11
 dos_row        8      10        12</code></pre>
 </div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejercicio 02.12</span></span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">-</span> Crear una matriz de <span class="dv">12</span> elementos numéricos con <span class="dv">6</span> filas.</span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">-</span> ¿Que número de columnas tendrá?</span>
+<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="sc">-</span> Imprimir todos los objetos en consola.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="listas" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Listas</h1>
+<section id="listas" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Listas</h1>
 <p>Muchos paquetes de estadística usan listas como objetos - contenedores de sus outputs o resultados.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>lista_1 <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="dv">2</span>,</span>
@@ -3652,8 +3648,8 @@ dos_row        8      10        12</code></pre>
 </div>
 </div>
 </section>
-<section id="indexado-de-listas" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Indexado de listas</h1>
+<section id="indexado-de-listas" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Indexado de listas</h1>
 <p>El indexado de listas puede hacerse con bse en los indexados previos y conociendo la estructura de las listas.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Subset usando operadores lógicos.</span></span>
@@ -3818,8 +3814,8 @@ $edad
 </div>
 </div>
 </section>
-<section id="importación" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> Importación</h1>
+<section id="importación" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Importación</h1>
 <p>Los elementos más comunes que se importan a la sesión de trabajo son los set de datos. El caso más frecuente es un .csv importado como un data frames o tibble.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb108"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejercicio 02.13</span></span>
@@ -3910,8 +3906,8 @@ dbl (4): sepal_length, sepal_width, petal_length, petal_width
 </div>
 <p>Se pueden importar funciones propias nuevas que realicen una tarea específica, o también puede ser una función modificada. Se pueden cargar con <strong>load()</strong>.</p>
 </section>
-<section id="exportación" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> Exportación</h1>
+<section id="exportación" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Exportación</h1>
 <p>Hay muchas cosas para exportar en una sesión de R. Lo importante es que se pueden exportar y guardar objetos con datos contenidos (.csv, .xls, .txt, .tsv, .gpkg, .png, .pdf, etc.) y archivos que contienen una copia de los objetos que se crearon en la sesión como .RData.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb121"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb121-1"><a href="#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejercicio 02.14</span></span>
